@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="fan.css" />
+    <script src="https://kit.fontawesome.com/7bfc8cee80.js"></script>
+    <title>Cooling Fan</title>
+  </head>
+  <body>
+    <main>
+      <div class="fanimg">
+        <img src="fan.png" alt="" />
+      </div>
+      <div class="buttons">
+        <span onclick="onFunc()">ON</span>
+        <span onclick="offFunc()">OFF</span>
+        <span onclick="oneFunc()">1</span>
+        <span onclick="twoFunc()">2</span>
+        <span onclick="threeFunc()">3</span>
+        <span onclick="themeFunc()"
+          ><i class="fa-solid fa-sun" id="icon"></i
+        ></span>
+      </div>
+    </main>
+    <script>
+      let img = document.getElementsByTagName("img")[0];
+      let fanimg = document.querySelector("main .fanimg");
+      let icon = document.getElementById("icon");
+      function onFunc() {
+        img.style.animationDuration = "1.5s";
+      }
+      function offFunc() {
+        img.style.animationDuration = "0s";
+      }
+      function oneFunc() {
+        img.style.animationDuration = "1s";
+      }
+      function twoFunc() {
+        img.style.animationDuration = ".5s";
+      }
+      function threeFunc() {
+        img.style.animationDuration = ".3s";
+      }
+      function themeFunc() {
+        document.body.classList.toggle("bgcolor");
+        fanimg.classList.toggle("active");
+        document.querySelector("main .buttons ").classList.toggle("active");
+        img.classList.toggle("active");
+        icon.classList.toggle("fa-moon");
+      }
+    </script>
+  </body>
+</html>
