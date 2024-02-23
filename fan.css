@@ -116,6 +116,9 @@ img.active {
     }
 }
 @media screen and (max-width:490px) {
+  .buttons.active  span{
+        box-shadow: 0 15px 25px -4px rgba(0, 0, 0, 0.5), inset 0 -3px 4px -1px rgba(0, 0, 0, 0.2), 0 -1px 15px -1px rgba(255, 255, 255, 0.6), inset 0 3px 4px -1px rgba(255, 255, 255, 0.2), inset 0 0 5px 1px rgba(255, 255, 255, 0.8), inset 0 20px 30px 0 rgba(255, 255, 255, 0.2);
+    }
     .buttons{
         height: 4rem;
         font-size: 1rem;
