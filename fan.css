@@ -63,7 +63,7 @@ img.active {
   display: grid;
   justify-items: center;
   align-content: center;
-  grid-template-columns: repeat(6,1fr);
+  grid-template-columns: repeat(6, 1fr);
   font-size: 2rem;
   background-color: whitesmoke;
   border-radius: 100px;
@@ -111,33 +111,38 @@ img.active {
     inset -6px -6px 10px 0 rgba(255, 255, 255, 0.5);
 }
 @media screen and (max-width: 560px) {
-    .buttons{
-        width: 99%;
-    }
+  .buttons {
+    width: 99%;
+  }
 }
-@media screen and (max-width:490px) {
-  .buttons.active  span{
-        box-shadow: 0 15px 25px -4px rgba(0, 0, 0, 0.5), inset 0 -3px 4px -1px rgba(0, 0, 0, 0.2), 0 -1px 15px -1px rgba(255, 255, 255, 0.6), inset 0 3px 4px -1px rgba(255, 255, 255, 0.2), inset 0 0 5px 1px rgba(255, 255, 255, 0.8), inset 0 20px 30px 0 rgba(255, 255, 255, 0.2);
-    }
-    .buttons{
-        height: 4rem;
-        font-size: 1rem;
-    }
-    .buttons span{
-        width: 50px;
-        height: 50px;
-    }
+@media screen and (max-width: 490px) {
+  .buttons.active span {
+    box-shadow: 0 15px 25px -4px rgba(0, 0, 0, 0.5),
+      inset 0 -3px 4px -1px rgba(0, 0, 0, 0.2),
+      0 -1px 15px -1px rgba(255, 255, 255, 0.6),
+      inset 0 3px 4px -1px rgba(255, 255, 255, 0.2),
+      inset 0 0 5px 1px rgba(255, 255, 255, 0.8),
+      inset 0 20px 30px 0 rgba(255, 255, 255, 0.2);
+  }
+  .buttons {
+    height: 4rem;
+    font-size: 1rem;
+  }
+  .buttons span {
+    width: 50px;
+    height: 50px;
+  }
 }
-@media screen and (max-width:281px) {
-    .fanimg{
-        width: 200px;
-        height:200px;
-    }
-    .buttons{
-        height: 3rem;
-    }
-    .buttons span{
-        width: 40px;
-        height: 40px;
-    }
+@media screen and (max-width: 281px) {
+  .fanimg {
+    width: 200px;
+    height: 200px;
+  }
+  .buttons {
+    height: 3rem;
+  }
+  .buttons span {
+    width: 40px;
+    height: 40px;
+  }
 }
