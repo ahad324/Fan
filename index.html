@@ -27,22 +27,74 @@
       let img = document.getElementsByTagName("img")[0];
       let fanimg = document.querySelector("main .fanimg");
       let icon = document.getElementById("icon");
+
+      let click = new Audio("click.mp3");
+      let fanstart = new Audio("./lightfan.mp3");
+      let fanloop = new Audio("./fanloop.mp3");
+      let fanhighspeed = new Audio("./highspeed.mp3");
+
+      function stopLooping() {
+        fanloop.loop = true;
+      }
+
+      function pauseAllAudios() {
+        let allAudios = [fanstart, fanloop, fanhighspeed];
+        allAudios.forEach((audio) => audio.pause());
+      }
+
+      function playLoopingAudio(audio) {
+        audio.loop = true;
+        audio.play();
+      }
+
       function onFunc() {
-        img.style.animationDuration = "1.5s";
-      }
-      function offFunc() {
-        img.style.animationDuration = "0s";
-      }
-      function oneFunc() {
+        click.play();
+        pauseAllAudios();
+        fanstart.play();
+        fanstart.addEventListener("ended", function () {
+          stopLooping();
+          playLoopingAudio(fanloop);
+        });
         img.style.animationDuration = "1s";
       }
-      function twoFunc() {
+
+      function offFunc() {
+        click.play();
+        pauseAllAudios();
+        img.style.animationDuration = "0s";
+      }
+
+      function oneFunc() {
+        click.play();
+        pauseAllAudios();
+        fanstart.play();
+        setTimeout(() => {
+          stopLooping();
+          playLoopingAudio(fanloop);
+        }, fanstart.duration * 1000);
         img.style.animationDuration = ".5s";
       }
-      function threeFunc() {
+
+      function twoFunc() {
+        click.play();
+        pauseAllAudios();
+        fanstart.play();
+        setTimeout(() => {
+          stopLooping();
+          playLoopingAudio(fanloop);
+        }, fanstart.duration * 1000);
         img.style.animationDuration = ".3s";
       }
+
+      function threeFunc() {
+        click.play();
+        pauseAllAudios();
+        playLoopingAudio(fanhighspeed);
+        img.style.animationDuration = ".2s";
+      }
+
       function themeFunc() {
+        click.play();
         document.body.classList.toggle("bgcolor");
         fanimg.classList.toggle("active");
         document.querySelector("main .buttons ").classList.toggle("active");
